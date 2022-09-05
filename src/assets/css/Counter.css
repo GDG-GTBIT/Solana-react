@@ -1,0 +1,56 @@
+@import url("https://use.typekit.net/wjp8wpq.css");
+
+
+
+.grid-container{
+font-family: fira-mono, monospace;
+font-weight: 700;
+color:#ffffff;
+font-style: normal;
+display: flex;
+flex-wrap: wrap;
+width: 373.92px;
+height: 96.03px;
+left: 279px;
+top: 638px;
+
+background: rgba(45, 45, 45, 0.51);
+box-shadow: 19.0705px 14.3028px 40.1842px rgba(0, 0, 0, 0.11);
+backdrop-filter: blur(45.6329px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 17.0272px;
+}
+
+.grid-item1{
+    /* flex:30%; */
+    font-size:16.35px;
+
+
+}
+
+.grid-item2{
+    font-size:16.35px;
+
+}
+
+.grid-item3{
+    font-size:16.35px;
+
+}
+
+.grid-item4{
+    font-size:27.2435px;
+
+
+}
+
+.grid-item5{
+    font-size:27.2435px;
+
+}
+
+.grid-item6{
+    font-size:27.2435px;
+
+}

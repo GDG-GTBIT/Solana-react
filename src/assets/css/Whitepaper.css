@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@700&display=swap");
+
+.container {
+  background-color: #000;
+  color: #fff;
+  width: 80%;
+}
+
+.box-title {
+  text-transform: uppercase;
+  font-family: "Fira Mono", monospace;
+}
+
+.image-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  width: 40%;
+}
+
+.text-box {
+  width: 60%;
+  font-family: "Fira Mono", monospace;
+}

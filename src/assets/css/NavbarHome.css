@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+.navbar-class {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+}
+
+.navbar-title {
+  text-transform: uppercase;
+}
+
+.navbar-title span {
+  font-family: "Almendra SC", serif;
+}
+
+.wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 2px;
+  width: 245px;
+  text-align: center;
+  border: 3px solid #fff;
+  background-color: black;
+}
+
+.bi {
+  padding: 3px;
+}
+
+.navbar-input {
+  background-color: black;
+  opacity: 0.8;
+  width: 100%;
+  font-size: smaller;
+  border: none;
+}
+
+.navbar-pages,
+.navbar-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-links,
+.nav-icon {
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 955px) {
+  .navbar-class {
+    gap: 30px;
+  }
+}
