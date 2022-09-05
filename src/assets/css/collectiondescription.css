@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 .collection__image{
    width: auto;
-   height: 40vh;
+    align-items: center;
    border: 1px solid #D9D9D9;
    border-radius: 10px;
 }
@@ -9,7 +9,7 @@
 .collection{
     background-image: url("../images/image_14.png");
     
-    height: 150vh;
+    height: auto;
     
     background-position: center;
     background-repeat: no-repeat;
@@ -17,6 +17,8 @@
     margin-top: -10px;
     margin-left: -10px;
     font-family: 'Rubik';
+    flex-direction: column;
+    align-items: center;
 }
 
 .collection__container{
@@ -171,7 +173,20 @@
     background-size: 300% 100%;
     border-radius: 50px;
 }
+
+
+
 @media (max-width: 1092px) {
+    .collection__container{
+        justify-content: center;
+    }
+    
+}
+
+/* .increaseWidth{
+    width: 40vw;
+} */
+@media (max-width: 500px) {
     .collection__container{
         justify-content: center;
     }
@@ -188,5 +203,11 @@
 @media (max-width: 360px) {
     .collection__info{
         width: 84vw;
+    }
+}
+
+@media (max-width: 968px) {
+    .cardsPrice{
+       flex-wrap: wrap;
     }
 }
