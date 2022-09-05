@@ -1,27 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@700&display=swap");
 
-.container {
-  background-color: #000;
+.aboutContainer{
+  width: 60%;
+  background: #d9d9d953;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+}
+.aboutContainerHead{
+  text-align: center;
+  padding: 10px;
   color: #fff;
-  width: 80%;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.aboutDescText{
+  padding: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
-.box-title {
-  text-transform: uppercase;
-  font-family: "Fira Mono", monospace;
+.aboutDescImgContainer{
+  background: #363636b1;
 }
 
-.image-text-box {
+.aboutDescContainer{
   display: flex;
-  justify-content: center;
+  padding: 30px;
   align-items: center;
 }
 
-.image-box {
-  width: 40%;
+.aboutDescImg{
+  box-shadow: -10px 10px 2px #000;
 }
-
-.text-box {
-  width: 60%;
-  font-family: "Fira Mono", monospace;
+@media screen  and (max-width: 900px){
+  .aboutDescContainer{
+    flex-direction: column;
+  }
+  .aboutDescContainer {
+    padding: 10px;
+  }
+  .aboutDescImg{
+    width: 40vw;
+  }
+  .aboutContainer{
+    width: 80%;
+  }
+  .aboutContainerHead{
+    font-size: 2rem;
+  }
 }

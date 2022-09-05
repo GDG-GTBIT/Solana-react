@@ -3,12 +3,12 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Whitepaper from "../components/Whitepaper";
 import Footer from "../components/Footer";
-
+import  "../assets/css/Home.css";
 function Home() {
   return (
-    <div>
+    <div className="Home">
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
       <Whitepaper />
       <Footer />
     </div>

@@ -43,6 +43,10 @@
       display: flex;
       padding: 10px;
 }
+.footerHomeAboutGDSC{
+      position: relative;
+}
+
 .footerHomeAboutGDSCHead{
       display: flex;
       gap: 5px;
@@ -62,7 +66,10 @@
       font-size: 1.4rem;
       font-weight: 400;
 }
-
+.footerHomeAboutGDSCTextDesc{
+      padding: 5px;
+      text-align: justify;
+}
 .footerHomeAboutContainer{
       padding: 50px 10px; 
       margin: 0 auto;
@@ -101,6 +108,10 @@
       display: flex;
       gap: 10px;
       justify-content: center;
+}
+.footerHomeAboutComIcon{
+      width: 25px;
+      border-radius: 10px;
 }
 
 @media screen  and (max-width: 950px){

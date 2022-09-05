@@ -1,21 +1,16 @@
 import React from "react";
 import "../assets/css/Whitepaper.css";
-
+import tiger_img from "../assets/images/Tiger_1_img.png";
 function Whitepaper() {
   return (
     <div>
-      <div className="container">
-        <h1 className="box-title text-center">
-          <div>about the</div> project
-        </h1>
-        <div className="image-text-box">
-          <div className="image-box">
-            <img src="" alt="" />
+      <div className="aboutContainer">
+        <div className="aboutContainerHead">ABOUT THE PROJECT</div>
+        <div className="aboutDescContainer">
+          <div className="aboutDescImgContainer">
+            <img className="aboutDescImg" src={tiger_img} alt="tiger icon" />
           </div>
-          <div className="text-box">
-            This project has been developed to raise awareness about the
-            decrease in the number of Malaysian tigers.
-          </div>
+          <div className="aboutDescText">This project has been developed to raise awareness  about the decrease in the number of Malaysian tigers.</div>
         </div>
       </div>
     </div>

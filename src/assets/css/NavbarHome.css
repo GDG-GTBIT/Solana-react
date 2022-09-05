@@ -1,73 +1,70 @@
 @import url("https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
-.navbar-class {
+.navbarHomeContainer{
+  width: 100%;
+  height: auto;
+  color: #fff;
+  font-weight: 600;
+  background: #d9d9d953;
+  padding: 5px;
+}
+.navbarReponsive{
+  display: none;
+}
+.navbarHomeContainer1{
   display: flex;
-  gap: 50px;
   justify-content: space-between;
-  background-color: #000;
-  color: #fff;
-  height: 80px;
-  width: 100%;
-  align-items: center;
 }
 
-.navbar-title {
-  text-transform: uppercase;
+.navbarTigerIconContainer{
+  object-fit: cover;
 }
-
-.navbar-title span {
-  font-family: "Almendra SC", serif;
+.navbarTigerIcon , .navbarGDSCIcon{
+  width: 70px;
 }
-
-.wrapper {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.navbar-search {
+.navbarHomeSection2{
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border-radius: 12px;
-  padding: 2px;
-  width: 245px;
-  text-align: center;
-  border: 3px solid #fff;
-  background-color: black;
+  gap: 20px;
 }
-
-.bi {
-  padding: 3px;
+.navbarHomeSection2Span{
+  font-family: 'Almendra SC', serif;
+  font-weight: 600;
 }
-
-.navbar-input {
-  background-color: black;
-  opacity: 0.8;
-  width: 100%;
-  font-size: smaller;
+.navbarHomeSection2SearchContainer{
+  border-radius: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #fff;
+}
+.navbarHomeSection2SearchBar{
+  padding: 5px;
+  outline: none;
   border: none;
-}
-
-.navbar-pages,
-.navbar-icons {
-  display: flex;
-  gap: 10px;
-}
-
-.navbar-links,
-.nav-icon {
-  font-family: "Rubik", sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
+  background: transparent;
   color: #fff;
 }
 
-@media (max-width: 955px) {
-  .navbar-class {
-    gap: 30px;
+.navbarHomeSection2part3{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* CSS for Responsive Navbar */
+.navbar{
+  background: #d9d9d953 !important;
+  padding: 0% !important;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1000px){
+  .navbarHomeContainer{
+    display: none;
+  }
+  .navbarReponsive{
+    display: block;
   }
 }
