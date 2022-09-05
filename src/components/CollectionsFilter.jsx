@@ -3,12 +3,10 @@ import '../assets/css/collectionsFilter.css';
 
 const CollectionsFilter = () => {
     return(
-        <div
-        //  className="bg-black"
-         >
+        <div className="bg-black bg-opacity-50">
             <div className="topFilter mx-auto py-3">
-                <div class="input-group inputTop bg-transparent bg-opacity-10 rounded-pill border border-white">
-                    <span className="input-group-text border-0 bg-transparent bg-opacity-10" id="search-addon">
+                <div class="input-group inputTop bg-transparent rounded-pill border border-white">
+                    <span className="input-group-text border-0 bg-transparent" id="search-addon">
                         <i className="bi bi-search text-success"></i>
                     </span>
                     <input id="topSearch" type="search" className="searchBarCollections border-0 shadow-none form-control rounded-pill bg-transparent bg-opacity-10" placeholder="Search Collectibles" aria-label="Search" aria-describedby="search-addon" />
@@ -29,10 +27,10 @@ const CollectionsFilter = () => {
             </div>
 
             <div className="leftFilter">
-                <div className="innerFilter bg-transparent bg-opacity-10 rounded border border-white mx-auto my-3 text-center">
+                <div className="innerFilter bg-white bg-opacity-10 rounded border border-white mx-auto my-3 text-center">
                     <div className="d-flex mx-4">
                         <div className="dropdown">
-                            <button className="btn rounded-pill bg-transparent bg-opacity-10 border text-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button className="btn rounded-pill bg-black bg-opacity-25 border text-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 <i className="bi bi-filter text-success px-2"></i>
                                 Filters
                             </button>
@@ -54,152 +52,152 @@ const CollectionsFilter = () => {
                             <button className="dropdown-item" type="button">Random 3</button>
                         </div>
                     </div> */}
-                    <div className="d-flex filterBtn w-75 flex-column mx-4 bg-transparent bg-opacity-10 border border-white mx-auto my-3 text-center">
-                        <button className="btn text-white collapseBtn collapsed collapse border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#priceCollapse" aria-expanded="false" aria-controls="collapseExample">
+                    <div className="d-flex filterBtn w-75 rounded flex-column mx-4 border border-white mx-auto my-3 text-center">
+                        <button className="btn text-white collapseBtn bg-black bg-opacity-25 collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#priceCollapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Price
                             <i class="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
-                        <div className="collapse my-0 bg-transparent bg-opacity-10" id="priceCollapse">
+                        <div className="collapse my-0" id="priceCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
-                            <div className="card card-body my-0 bg-transparent bg-opacity-10 d-flex flex-row justify-content-center">
+                            <div className="card card-body bg-black bg-opacity-25 my-0 d-flex flex-row justify-content-center">
 
                             </div>
                         </div>
                     </div>
 
-                    <div className="d-flex filterBtn w-75 flex-column mx-4 bg-transparent bg-opacity-10 border border-white mx-auto my-3 text-center">
-                        <button className="btn text-white collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#backgroundCollapse" aria-expanded="false" aria-controls="collapseExample">
+                    <div className="d-flex filterBtn w-75 rounded flex-column mx-4 border border-white mx-auto my-3 text-center">
+                        <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#backgroundCollapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Background
                             <i class="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
-                        <div className="collapse my-0 bg-transparent bg-opacity-10" id="backgroundCollapse">
+                        <div className="collapse my-0" id="backgroundCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
-                            <div className="card card-body my-0 bg-transparent bg-opacity-10 d-flex flex-row justify-content-center">
+                            <div className="card card-body bg-black bg-opacity-25 my-0 d-flex flex-row justify-content-center">
 
                             </div>
                         </div>
                     </div>
 
-                    <div className="d-flex filterBtn w-75 flex-column mx-4 bg-transparent bg-opacity-10 border border-white mx-auto my-3 text-center">
-                        <button className="btn text-white collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#furCollapse" aria-expanded="false" aria-controls="collapseExample">
+                    <div className="d-flex filterBtn w-75 rounded flex-column mx-4 border border-white mx-auto my-3 text-center">
+                        <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#furCollapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Fur
                             <i class="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
-                        <div className="collapse my-0 bg-transparent bg-opacity-10" id="furCollapse">
+                        <div className="collapse my-0" id="furCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
-                            <div className="card card-body my-0 bg-transparent bg-opacity-10 d-flex flex-row justify-content-center">
+                            <div className="card card-body bg-black bg-opacity-25 my-0 d-flex flex-row justify-content-center">
                             
                             </div>
                         </div>
                     </div>
 
-                    <div className="d-flex filterBtn w-75 flex-column mx-4 bg-transparent bg-opacity-10 border border-white mx-auto my-3 text-center">
-                        <button className="btn text-white collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#themeCollapse" aria-expanded="false" aria-controls="collapseExample">
+                    <div className="d-flex filterBtn w-75 rounded flex-column mx-4 border border-white mx-auto my-3 text-center">
+                        <button className="btn text-white bg-black bg-opacity-25 collapseBtn show border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#themeCollapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Theme
                             <i class="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
-                        <div className="collapse my-0 bg-transparent bg-opacity-10" id="themeCollapse">
+                        <div className="collapse my-0 show" id="themeCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
-                            <div className="card card-body my-0 bg-transparent bg-opacity-10 d-flex flex-column justify-content-center">
-                                <div class="input-group bg-transparent bg-opacity-10 rounded-pill border border-white mt-0">
-                                    <span className="input-group-text border-0 bg-transparent bg-opacity-10" id="search-addon">
+                            <div className="card card-body my-0 bg-black bg-opacity-25 d-flex flex-column justify-content-center">
+                                <div class="input-group rounded-pill border border-white mt-0">
+                                    <span className="input-group-text border-0 bg-transparent" id="search-addon">
                                         <i className="bi bi-search text-success"></i>
                                     </span>
                                     <input id="themeSearch" type="search" className="searchBarCollections border-0 shadow-none form-control rounded-pill bg-transparent bg-opacity-10" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                                 </div>
                                 <div className="d-flex justify-content-between text-white my-2">
-                                    <span>
+                                    <span className="searchSpan">
                                         Spooky
                                     </span>
                                     <div className="my-0">
                                         <span className="mx-2">9</span>
-                                        <input className="form-check-input bg-transparent bg-opacity-10 border" type="checkbox" value="spooky" id="flexCheckDefault" />
+                                        <input className="form-check-input border" type="checkbox" value="spooky" id="flexCheckDefault" />
                                     </div>
                                 </div>
 
                                 <div className="d-flex justify-content-between text-white my-2">
-                                    <span>
+                                    <span className="searchSpan">
                                         Winter
                                     </span>
                                     <div className="my-0">
                                         <span className="mx-2">9</span>
-                                        <input className="form-check-input bg-transparent bg-opacity-10 border" type="checkbox" value="winter" id="flexCheckDefault" />
+                                        <input className="form-check-input border" type="checkbox" value="winter" id="flexCheckDefault" />
                                     </div>
                                 </div>
 
                                 <div className="d-flex justify-content-between text-white my-2">
-                                    <span>
+                                    <span className="searchSpan">
                                         Green
                                     </span>
                                     <div className="my-0">
                                         <span className="mx-2">9</span>
-                                        <input className="form-check-input bg-transparent bg-opacity-10 border" type="checkbox" value="green" id="flexCheckDefault" />
+                                        <input className="form-check-input border" type="checkbox" value="green" id="flexCheckDefault" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="d-flex filterBtn w-75 flex-column mx-4 bg-transparent bg-opacity-10 border border-white mx-auto my-3 text-center">
-                        <button className="btn text-white collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#statusCollapse" aria-expanded="false" aria-controls="collapseExample">
+                    <div className="d-flex filterBtn w-75 rounded flex-column mx-4 border border-white mx-auto my-3 text-center">
+                        <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#statusCollapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Status
                             <i class="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
-                        <div className="collapse my-0 bg-transparent bg-opacity-10" id="statusCollapse">
+                        <div className="collapse my-0" id="statusCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
-                            <div className="card card-body my-0 bg-transparent bg-opacity-10 d-flex flex-row justify-content-center">
+                            <div className="card card-body bg-black bg-opacity-25 my-0 d-flex flex-row justify-content-center">
                             
                             </div>
                         </div>
                     </div>
 
-                    <div className="d-flex filterBtn w-75 flex-column mx-4 bg-transparent bg-opacity-10 border border-white mx-auto my-3 text-center">
-                        <button className="btn text-white collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#sample1Collapse" aria-expanded="false" aria-controls="collapseExample">
+                    <div className="d-flex filterBtn w-75 rounded flex-column mx-4 border border-white mx-auto my-3 text-center">
+                        <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#sample1Collapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Sample 1
                             <i class="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
-                        <div className="collapse my-0 bg-transparent bg-opacity-10" id="sample1Collapse">
+                        <div className="collapse my-0" id="sample1Collapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
-                            <div className="card card-body my-0 bg-transparent bg-opacity-10 d-flex flex-row justify-content-center">
+                            <div className="card card-body bg-black bg-opacity-25 my-0 d-flex flex-row justify-content-center">
                             
                             </div>
                         </div>
                     </div>
 
-                    <div className="d-flex filterBtn w-75 flex-column mx-4 bg-transparent bg-opacity-10 border border-white mx-auto my-3 text-center">
-                        <button className="btn text-white collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#sample2Collapse" aria-expanded="false" aria-controls="collapseExample">
+                    <div className="d-flex filterBtn w-75 rounded flex-column mx-4 border border-white mx-auto my-3 text-center">
+                        <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#sample2Collapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Sample 2
                             <i class="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
-                        <div className="collapse my-0 bg-transparent bg-opacity-10" id="sample2Collapse">
+                        <div className="collapse my-0" id="sample2Collapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
-                            <div className="card card-body my-0 bg-transparent bg-opacity-10 d-flex flex-row justify-content-center">
+                            <div className="card card-body bg-black bg-opacity-25 my-0 d-flex flex-row justify-content-center">
                             
                             </div>
                         </div>
                     </div>
 
-                    <div className="d-flex filterBtn w-75 flex-column mx-4 bg-transparent bg-opacity-10 border border-white mx-auto my-3 text-center">
-                        <button className="btn text-white collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#sample3Collapse" aria-expanded="false" aria-controls="collapseExample">
+                    <div className="d-flex filterBtn w-75 rounded flex-column mx-4 border border-white mx-auto my-3 text-center">
+                        <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#sample3Collapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Sample 3
                             <i class="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
-                        <div className="collapse my-0 bg-transparent bg-opacity-10" id="sample3Collapse">
+                        <div className="collapse my-0" id="sample3Collapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
-                            <div className="card card-body my-0 bg-transparent bg-opacity-10 d-flex flex-row justify-content-center">
+                            <div className="card card-body bg-black bg-opacity-25 my-0 d-flex flex-row justify-content-center">
                             
                             </div>
                         </div>
                     </div>
-
+                    
 
                 </div>
             </div>
