@@ -3,7 +3,7 @@ import "../assets/css/Whitepaper.css";
 import tiger_img from "../assets/images/Tiger_1_img.png";
 function Whitepaper() {
   return (
-    <div>
+    <div className="WhitePaper">
       <div className="aboutContainer">
         <div className="aboutContainerHead">ABOUT THE PROJECT</div>
         <div className="aboutDescContainer">
