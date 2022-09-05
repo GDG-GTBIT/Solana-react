@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="Home">
       <Navbar />
-      {/* <Hero /> */}
+      <Hero />
       <Whitepaper />
       <Footer />
     </div>
