@@ -10,7 +10,7 @@
     background-image: url("../images/image_14.png");
     
     height: 150vh;
-    width: 100vw;
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,26 +65,28 @@
     
     font-size: 22px;
 }
-.col2 a:hover{
+.col2 :hover{
     color: #2bb673;
 }
 .col2 a{
     text-decoration: none;
     color: white;
 }
-.col1 a:hover{
+.col1 :hover{
     color: #2bb673;
 }
-.col1 a{
+.col1 {
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
-.col3 a:hover{
+.col3 :hover{
     color: #2bb673;
 }
-.col3 a{
+.col3 {
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 
 .info__priceBox{
@@ -169,8 +171,22 @@
     background-size: 300% 100%;
     border-radius: 50px;
 }
+@media (max-width: 1092px) {
+    .collection__container{
+        justify-content: center;
+    }
+    
+}
 @media (max-width: 768px) {
-    .collection{
-        flex-direction: column;
+    .collection__container{
+        justify-content: center;
+    }
+    .collection__info{
+        width: 69vw;
+    }
+}
+@media (max-width: 360px) {
+    .collection__info{
+        width: 84vw;
     }
 }
