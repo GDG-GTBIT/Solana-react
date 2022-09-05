@@ -3,7 +3,9 @@ import '../assets/css/collectionsFilter.css';
 
 const CollectionsFilter = () => {
     return(
-        <div className="bg-black">
+        <div
+        //  className="bg-black"
+         >
             <div className="topFilter mx-auto py-3">
                 <div class="input-group inputTop bg-transparent bg-opacity-10 rounded-pill border border-white">
                     <span className="input-group-text border-0 bg-transparent bg-opacity-10" id="search-addon">
@@ -26,7 +28,7 @@ const CollectionsFilter = () => {
                 </div>
             </div>
 
-            <div className="leftFilter bg-black">
+            <div className="leftFilter">
                 <div className="innerFilter bg-transparent bg-opacity-10 rounded border border-white mx-auto my-3 text-center">
                     <div className="d-flex mx-4">
                         <div className="dropdown">

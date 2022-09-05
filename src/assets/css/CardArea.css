@@ -1,13 +1,14 @@
 .cardarea{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     /* min-height:80vh; */
     width:70vw;
-    position:relative;
+    /* position:relative;
     top:20vh;
-    left:30vw;
+    left:30vw; */
     /* background: black; */
     flex-wrap: wrap;
     display:flex;
     justify-content: center;
     align-items: center;
+    margin-left: 25%;
 }
