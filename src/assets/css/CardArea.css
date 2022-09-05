@@ -1,7 +1,7 @@
 .cardarea{
     /* border: 1px solid white; */
     /* min-height:80vh; */
-    width:70vw;
+    width:78vw;
     /* position:relative;
     top:20vh;
     left:30vw; */
@@ -10,5 +10,5 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-left: 25%;
+    margin-left: 20%;
 }
