@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@700&display=swap");
-
+.WhitePaper{
+  padding: 20px 0px;
+}
 .aboutContainer{
   width: 60%;
-  background: #d9d9d953;
+  background: #0000006e;
   margin: 0 auto;
   padding: 40px;
   border-radius: 10px;
 }
 .aboutContainerHead{
   text-align: center;
-  padding: 10px;
+  padding:  10px;
   color: #fff;
   font-size: 3rem;
   font-weight: 700;
