@@ -24,7 +24,7 @@ const CollectionsFilter = () => {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <i class="bi bi-grid-fill text-white"></i>
+                    <i class="bi bi-grid-fill fa-md text-white" style={{fontSize: "20px"}}></i>
                 </button>
                 <div className="input-group inputTop bg-transparent rounded-pill border border-white">
                     <span className="input-group-text border-0 bg-transparent" id="search-addon">

@@ -74,11 +74,17 @@
         position: absolute;
         left: 0;
         margin-left: 0;
-        width: 45%;
+        width: 55%;
         background-color: rgb(0,0,0);
     }    
 
     .innerFilter {
         background-color: rgba(0,0,0,0.9);
     }
+}
+
+@media screen and (max-width: 425px) {
+    .leftFilter {
+        width: 70%;
+    }   
 }
