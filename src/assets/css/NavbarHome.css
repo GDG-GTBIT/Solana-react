@@ -39,15 +39,15 @@
   font-weight: 600;
 }
 .navbarHomeSection2SearchContainer{
-  border-radius: 10px;
   height: 40px;
   display: flex;
+  border-bottom: 1px solid rgb(141, 141, 141);
   align-items: center;
   justify-content: center;
 }
 .navbarHomeSection2SearchBar{
   padding: 5px;
-  outline: none;
+  outline:none;
   border: none;
   background: transparent;
   color: #fff;
