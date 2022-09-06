@@ -23,12 +23,12 @@ function Navbar() {
               <input
                 className="navbarHomeSection2SearchBar"
                 type={"text"}
-                placeholder="search Item,collectibles etc"
+                placeholder="Search items, Collections"
               ></input>
             </div>
             <div className="navbarHomeSection2part3">
               <div>COLLECTION</div>
-              <div>MINT NOW</div>
+              {/* <div>MINT NOW</div> */}
               <div>WHITE PAPER</div>
               <div>ABOUT</div>
               <div>
@@ -46,14 +46,14 @@ function Navbar() {
       </nav>
       <nav className="navbar navbar-dark bg-dark fixed-top navbarReponsive">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-          <div className="navbarTigerIconContainer">
-            <img
-              className="navbarTigerIcon"
-              src={tiger_icon}
-              alt="tiger icon"
-            />
-          </div>
+          <a className="navbar-brand" href="/">
+            <div className="navbarTigerIconContainer">
+              <img
+                className="navbarTigerIcon"
+                src={tiger_icon}
+                alt="tiger icon"
+              />
+            </div>
           </a>
           <button
             className="navbar-toggler"
@@ -82,22 +82,22 @@ function Navbar() {
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <a className="nav-link active" aria-current="page" href="/">
                     COLLECTION
                   </a>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link" href="#">
                     MINT NOW
                   </a>
-                </li>
+                </li> */}
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/">
                     WHITE PAPER
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/">
                     ABOUT
                   </a>
                 </li>
@@ -106,7 +106,7 @@ function Navbar() {
                 <input
                   className="form-control me-2"
                   type="search"
-                  placeholder="Search , items , Collectibles"
+                  placeholder="Search items, Collections"
                   aria-label="Search"
                 />
                 <button className="btn btn-success" type="submit">
