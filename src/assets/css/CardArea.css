@@ -1,7 +1,7 @@
 .cardarea{
     /* border: 1px solid white; */
     /* min-height:80vh; */
-    width:78vw;
+    width:73vw;
     /* position:relative;
     top:20vh;
     left:30vw; */
@@ -10,5 +10,12 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20%;
+    margin-left: 25%;
+}
+
+@media screen and (max-width: 1024px) {
+    .cardarea{
+        width:68vw;
+        margin-left: 30%;
+    }
 }

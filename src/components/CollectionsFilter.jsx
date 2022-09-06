@@ -28,19 +28,13 @@ const CollectionsFilter = () => {
 
             <div className="leftFilter">
                 <div className="innerFilter bg-white bg-opacity-10 rounded border border-white mx-auto my-3 text-center">
-                    <div className="d-flex mx-4">
                         <div className="dropdown">
-                            <button className="btn rounded-pill bg-black bg-opacity-25 border text-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                <i className="bi bi-filter text-success px-2"></i>
+                            <div className="text-white">
                                 Filters
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button className="dropdown-item" type="button">Random 1</button>
-                                <button className="dropdown-item" type="button">Random 2</button>
-                                <button className="dropdown-item" type="button">Random 3</button>
+                                <i className="bi bi-filter text-success px-2"></i>
                             </div>
+                            <hr className="w-75 m-0 mx-auto border"/>
                         </div>
-                    </div>
 
                     {/* <div className="dropdown my-3">
                         <button className="btn rounded-pill bg-transparent bg-opacity-10 border text-white dropdown-toggle w-75" type="button" id="dropdownMenu2" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
