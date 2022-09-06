@@ -1,21 +1,47 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import '../assets/css/Card.css';
 import NFT1 from "../assets/images/NFT1.png";
 import NFT2Back from "../assets/images/NFT2BACKGROUND.png";
 
-const Card = () => {
+
+const Card = (props) => {
+    const [clicked,setClicked] = useState(false);
+
+    useEffect(()=>{
+        setClicked(props.visible);
+    },[]);
+
+    function handleClick(check){
+        setClicked(check);
+        if(check){
+            props.cardsArr.push(props.id);
+        }
+        else{
+            for( var i = 0; i < props.cardsArr.length; i++){ 
+                if (props.cardsArr[i] === props.id) { 
+                    props.cardsArr.splice(i, 1); 
+                }
+            }
+        }
+    }
     return (
         
         <div class="card" style={{
         width: "12rem", 
-        background: "grey", 
+        // background: "grey", 
         display: "flex",
         alignItems:"center",
         borderRadius:"5%",
         color: "white",
         marginRight:"2%",
         marginBottom:"2%",
-        fontSize:"14px"
+        fontSize:"14px",
+        background: "rgba( 144, 130, 130, 0.25 )",
+        boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+        backdropFilter: "blur( 5.5px )",
+        webkitBackdropFilter: "blur( 5.5px )",
+        borderRadius: "10px",
+        border: "1px solid rgba( 255, 255, 255, 0.18 )"
         }}>
             <img class="card-img-top" src={NFT1} alt="Card image cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
             marginTop:"5%"
@@ -49,7 +75,14 @@ const Card = () => {
                     XXXX
                 </div>
                 <div class="card-text">
-                    XXXX
+                    {/* XXXX */}
+                    {clicked == false? 
+                    <i class="bi bi-heart" onClick={()=>{handleClick(true)}}></i>
+                    : 
+                    <i class="bi bi-heart-fill" onClick={()=>{handleClick(false)}}></i>
+                    }
+                    
+                    
                 </div>
             </div>
 
