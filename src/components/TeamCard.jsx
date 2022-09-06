@@ -57,13 +57,13 @@ const TeamCard = () => {
                 paddingTop:"10px"
             }}>
                 <div class="card-text">
-                    <span className='bi bi-instagram'></span>
+                    <span className='bi bi-instagram text-dark'></span>
                 </div>
                 <div class="card-text">
-                <span className='bi bi-linkedin'></span>
+                <span className='bi bi-linkedin text-dark'></span>
                 </div>
                 <div class="card-text">
-                <span className='bi bi-twitter'></span>
+                <span className='bi bi-twitter text-dark'></span>
                 </div>
             </div>
         </div>
