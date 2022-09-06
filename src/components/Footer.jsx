@@ -66,11 +66,11 @@ function Footer() {
         <div className="footerHomeAboutComHead">Join Our Community</div>
         <div className="footerHomeAboutComDesc">
           <div className="footerHomeAboutComDescContainer">
-            <a href="https://www.youtube.com/c/GDSCGTBIT/featured" target={"_blank"}><img className="footerHomeAboutComIcon" src={discord_icon}  alt = {"icon"}/></a>
-            <a href="https://www.facebook.com/dscgtbit" target={"_blank"}><img className="footerHomeAboutComIcon" src={facebook_icon}  alt = {"icon"}/></a>
-            <a href="https://www.instagram.com/gdscgtbit/" target={"_blank"}><img className="footerHomeAboutComIcon" src={insta_icon}  alt = {"icon"}/></a>
-            <a href="https://twitter.com/gdscgtbit" target={"_blank"}><img className="footerHomeAboutComIcon" src={twitter_icon}  alt = {"icon"}/></a>
-            <a href="https://www.youtube.com/c/GDSCGTBIT/featured" target={"_blank"}><img className="footerHomeAboutComIcon" src={youtube_icon}  alt = {"icon"}/></a>
+            <a href="https://www.youtube.com/c/GDSCGTBIT/featured" rel="noreferrer"  target={"_blank"}><img className="footerHomeAboutComIcon" src={discord_icon}  alt = {"icon"}/></a>
+            <a href="https://www.facebook.com/dscgtbit" rel="noreferrer"  target={"_blank"}><img className="footerHomeAboutComIcon" src={facebook_icon}  alt = {"icon"}/></a>
+            <a href="https://www.instagram.com/gdscgtbit/" rel="noreferrer"  target={"_blank"}><img className="footerHomeAboutComIcon" src={insta_icon}  alt = {"icon"}/></a>
+            <a href="https://twitter.com/gdscgtbit" rel="noreferrer"  target={"_blank"}><img className="footerHomeAboutComIcon" src={twitter_icon}  alt = {"icon"}/></a>
+            <a href="https://www.youtube.com/c/GDSCGTBIT/featured" rel="noreferrer"  target={"_blank"}><img className="footerHomeAboutComIcon" src={youtube_icon}  alt = {"icon"}/></a>
           </div>
         </div>
       </div>

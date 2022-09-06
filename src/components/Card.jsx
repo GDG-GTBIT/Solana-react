@@ -17,7 +17,7 @@ const Card = () => {
         marginBottom:"2%",
         fontSize:"14px"
         }}>
-            <img class="card-img-top" src={NFT1} alt="Card image cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
+            <img class="card-img-top" src={NFT1} alt="Card cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
             marginTop:"5%"
             }} />
             <div class="card-body" style={{
