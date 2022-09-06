@@ -8,21 +8,27 @@ const Card = (props) => {
     const [clicked,setClicked] = useState(false);
 
     useEffect(()=>{
+        console.log(props.id," ",props.visible);
         setClicked(props.visible);
     },[]);
 
     function handleClick(check){
         setClicked(check);
         if(check){
-            props.cardsArr.push(props.id);
+            // props.cardsArr.push(props.id);
+            props.setCardsArr([...props.cardsArr,props.id]);
         }
         else{
-            for( var i = 0; i < props.cardsArr.length; i++){ 
-                if (props.cardsArr[i] === props.id) { 
-                    props.cardsArr.splice(i, 1); 
+            let arr = JSON.parse(JSON.stringify(props.cardsArr));
+            
+            for( var i = 0; i < arr.length; i++){ 
+                if (arr[i] === props.id) { 
+                    arr.splice(i, 1); 
                 }
             }
+            props.setCardsArr([...arr]);
         }
+        
     }
     return (
         

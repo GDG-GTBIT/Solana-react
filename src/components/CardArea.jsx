@@ -37,7 +37,7 @@ import '../assets/css/CardArea.css';
 
 const CardArea = () => {
   const [cardsLength,setCardsLength] = useState(8);
-  const [cardsArr,setCardsArr] = useState(null);
+  const [cardsArr,setCardsArr] = useState(1);
 
   useEffect(()=>{
     setCardsArr(JSON.parse(localStorage.getItem("cards")));
@@ -45,7 +45,7 @@ const CardArea = () => {
   },[]);
 
   useEffect(()=>{
-    if(!cardsArr) return;
+    if(cardsArr == 1) return;
 
     console.log("cardsArr",cardsArr);
     localStorage.setItem("cards",JSON.stringify(cardsArr));
@@ -53,11 +53,18 @@ const CardArea = () => {
 
   return (
     <div className="cardarea">
-        {[...Array(cardsLength)].map((e,i)=>{
-          if(cardsArr && cardsArr.includes(i))
-          return <Card key={i} cardsArr={cardsArr} id={i} visible={true}/>;
+        { 
+        cardsArr==1?"":
+
+        [...Array(cardsLength)].map((e,i)=>{
+          
+          if(cardsArr.includes(i)){
+            console.log(cardsArr.includes(i));
+          return <Card key={i} cardsArr={cardsArr} id={i} visible={true} setCardsArr={setCardsArr}/>;
+          
+          }
           else
-          return <Card key={i} cardsArr={cardsArr} id={i} visible={false}/>;
+          return <Card key={i} cardsArr={cardsArr} id={i} visible={false} setCardsArr={setCardsArr}/>;
         })}
     </div>
   )
