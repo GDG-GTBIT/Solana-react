@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../assets/css/collectionsFilter.css';
 
 const CollectionsFilter = () => {
-    const [isTablet, setIsTablet] = useState(window.innerWidth > 769);
+    const [isTablet, setIsTablet] = useState(false);
 
     useEffect(() => {
         window.addEventListener("resize", () => {
@@ -47,8 +47,8 @@ const CollectionsFilter = () => {
                 </div>
             </div>
 
-            <div id="sidebarMenu" className={`${isTablet ? "leftFilter sidebar collapse" : "leftFilter sidebar"}`} data-bs-hidden="false">
-                <div className="innerFilter bg-white bg-opacity-10 rounded border border-white mx-auto my-3 text-center">
+            <div  className={`${isTablet ? "leftFilter sidebar collapse" : "leftFilter sidebar"}`} data-bs-hidden="false">
+                <div id="sidebarMenu" className="innerFilter bg-white bg-opacity-10 rounded border border-white mx-auto my-3 text-center">
                         <div className="dropdown">
                             <div className="text-white">
                                 Filters
