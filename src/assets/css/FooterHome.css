@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+.footerHomeContainer{
+      width: 100%;
+      border-top: solid 2px #fff;
+      min-height: 50vh;
+      height: auto;
+      font-family: 'Fira Mono', monospace;
+      padding: 20px 10px;
+      background: #000;
+      color: #fff;
+}
+.footerHomeEmailSectionContainer{
+      width: 70%;
+      margin: 0 auto;
+}
+.footerHomeSection1Head1{
+      font-size: 1.5rem;
+      padding: 10px;
+      font-weight: 700;
+}
+.footerHomeSection1Head2{
+      font-size: 1rem;
+      padding: 0px 10px;
+}
+.footerHomeEmailInput{
+      width: 50%;
+      background: #D9D9D9;
+      padding: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      outline: none;
+      border: none;
+}
+.footerHomeEmailSubmitIcon{
+      background: #54D269;
+      color: #fff;
+      border: none;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+      font-weight: 700;
+}
+.footerHomeEmailContainer{
+      display: flex;
+      padding: 10px;
+}
+.footerHomeAboutGDSC{
+      position: relative;
+}
+
+.footerHomeAboutGDSCHead{
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      padding-bottom: 10px;
+      flex-wrap: wrap;
+}
+.footerHomeAboutGDSCLogoContainer{
+      width: 65px;
+      height: 20px;
+      object-fit: contain;
+}
+.footerHomeAboutGDSCLogo{
+      width: 60px;
+}
+.footerHomeAboutGDSCText{
+      font-size: 1.4rem;
+      font-weight: 400;
+}
+.footerHomeAboutGDSCTextDesc{
+      padding: 5px;
+      text-align: justify;
+}
+.footerHomeAboutContainer{
+      padding: 50px 10px; 
+      margin: 0 auto;
+      width: 70%;
+      justify-items: center;
+      display: grid;
+      grid-template-columns: repeat(3 , 1fr);
+}
+.footerHomeAboutMarketContainer{
+      display: flex;
+      flex-direction: column;
+}
+.footerHomeAboutMarketHead,.footerHomeAboutLinksHead{
+      font-weight: 700;
+      padding-bottom: 15px;
+      font-size: 1.2rem;
+}
+.footerHomeAboutMarketDesc , .footerHomeAboutLinkDesc{
+      display: flex;
+      gap: 2px;
+      flex-direction: column;
+}
+.footerHomeAboutJoinCom{
+      margin: 0 auto;
+      width: 70%;
+      text-align: center;
+}
+.footerHomeAboutComHead{
+      font-size: 1.2rem;
+      font-weight: 700;
+}
+.footerHomeAboutComDesc{
+      margin: 0 auto; 
+}
+.footerHomeAboutComDescContainer{
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+}
+.footerHomeAboutComIcon{
+      width: 25px;
+      border-radius: 10px;
+}
+
+@media screen  and (max-width: 950px){
+      .footerHomeEmailSectionContainer , .footerHomeAboutContainer
+      {
+            width: 100%;
+      }
+}
+
+@media screen  and (max-width: 600px){
+      .footerHomeEmailContainer{
+            justify-content: center;
+      }
+      .footerHomeAboutContainer{
+            display: flex;
+            flex-direction: column;
+      }
+      .footerHomeAboutMarketHead, .footerHomeAboutLinksHead {
+            text-align: center;
+            padding-bottom: 2px;
+      }
+      .footerHomeEmailInput {
+            width: 70%;
+      }
+}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../assets/css/collectionsFilter.css';
+import '../assets/css/CollectionsFilter.css';
 
 const CollectionsFilter = () => {
     const [isTablet, setIsTablet] = useState(false);
