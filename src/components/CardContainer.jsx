@@ -10,7 +10,7 @@ function CardContainer() {
       <div>
         <h1 className="text-center collectionHeading">TOP COLLECTIONS</h1>
         <div className="search-filter-sort">
-          <div className="navbarHomeSection2SearchContainer cardsearchoption">
+          <div className="navbarHomeSection2SearchContainer shadow cardsearchoption">
             <i className="bi bi-search"></i>
             <input
               className="navbarHomeSection2SearchBar"

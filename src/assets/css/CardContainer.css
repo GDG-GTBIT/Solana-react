@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@700&display=swap");
 .collectionHeading {
   color: #fff;
   font-size: 7.2em;
   text-align: center;
+  font-family: "Fira Mono", monospace;
+  font-weight: 700;
 }
 
 .search-filter-sort {
@@ -21,10 +24,11 @@
 .cardsearchoption {
   border: 2px solid #fff;
   padding: 10px;
+  border-radius: 15px;
 }
 
-.bi{
-    color: #fff;
+.bi {
+  color: #fff;
 }
 
 .cardContainer {
@@ -36,9 +40,8 @@
   padding: 50px;
 }
 
-
-@media screen and (max-width: 800px){
-  .collectionHeading{
+@media screen and (max-width: 800px) {
+  .collectionHeading {
     font-size: 3rem;
   }
 }
