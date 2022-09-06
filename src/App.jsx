@@ -4,10 +4,13 @@ import CollectionDescription  from './pages/CollectionDescription'
 import Collections  from './pages/Collections'
 import Home from './pages/Home'
 import Team from './pages/Team';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div>
+      <Navbar />
        <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -16,6 +19,7 @@ function App() {
           <Route path="/team" element={<Team />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

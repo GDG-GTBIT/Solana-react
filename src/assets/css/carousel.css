@@ -1,0 +1,17 @@
+.carousel{
+    margin: 10px 0px;
+  }
+  
+  .imgCaroselContainer{
+    position: relative;
+    margin: 0 auto;
+    background-size: cover;
+    object-fit: cover;
+    text-align: center;
+    width:70%;
+  }
+  .CaroselImg{
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+  }
