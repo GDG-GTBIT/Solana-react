@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../assets/css/collectionsFilter.css';
 
 const CollectionsFilter = () => {
+    const [isTablet, setIsTablet] = useState(window.innerWidth > 769);
+
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            const istablet = window.innerWidth < 768;
+            if (istablet !== isTablet) setIsTablet(istablet);
+        }, false);
+    }, [isTablet]);
+
     return(
         <div className="bg-black bg-opacity-50">
             <div className="topFilter mx-auto py-3">
-                <div class="input-group inputTop bg-transparent rounded-pill border border-white">
+
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sidebarMenu"
+                    aria-controls="sidebarMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="bi bi-grid-fill text-white"></i>
+                </button>
+                <div className="input-group inputTop bg-transparent rounded-pill border border-white">
                     <span className="input-group-text border-0 bg-transparent" id="search-addon">
                         <i className="bi bi-search text-success"></i>
                     </span>
@@ -15,7 +36,7 @@ const CollectionsFilter = () => {
                 <div className="dropdown">
                     
                     <button className="btn rounded-pill bg-transparent bg-opacity-10 border text-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <i class="bi bi-arrow-down-up text-success px-2"></i>
+                        <i className="bi bi-arrow-down-up text-success px-2"></i>
                         Sort By
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -26,7 +47,7 @@ const CollectionsFilter = () => {
                 </div>
             </div>
 
-            <div className="leftFilter">
+            <div id="sidebarMenu" className={`${isTablet ? "leftFilter sidebar collapse" : "leftFilter sidebar"}`} data-bs-hidden="false">
                 <div className="innerFilter bg-white bg-opacity-10 rounded border border-white mx-auto my-3 text-center">
                         <div className="dropdown">
                             <div className="text-white">
@@ -50,7 +71,7 @@ const CollectionsFilter = () => {
                         <button className="btn text-white collapseBtn bg-black bg-opacity-25 collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#priceCollapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Price
-                            <i class="bi bi-chevron-up text-white menu-icon-right"></i>
+                            <i className="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
                         <div className="collapse my-0" id="priceCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
@@ -64,7 +85,7 @@ const CollectionsFilter = () => {
                         <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#backgroundCollapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Background
-                            <i class="bi bi-chevron-up text-white menu-icon-right"></i>
+                            <i className="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
                         <div className="collapse my-0" id="backgroundCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
@@ -78,7 +99,7 @@ const CollectionsFilter = () => {
                         <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#furCollapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Fur
-                            <i class="bi bi-chevron-up text-white menu-icon-right"></i>
+                            <i className="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
                         <div className="collapse my-0" id="furCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
@@ -92,7 +113,7 @@ const CollectionsFilter = () => {
                         <button className="btn text-white bg-black bg-opacity-25 collapseBtn show border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#themeCollapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Theme
-                            <i class="bi bi-chevron-up text-white menu-icon-right"></i>
+                            <i className="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
                         <div className="collapse my-0 show" id="themeCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
@@ -140,7 +161,7 @@ const CollectionsFilter = () => {
                         <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#statusCollapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Status
-                            <i class="bi bi-chevron-up text-white menu-icon-right"></i>
+                            <i className="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
                         <div className="collapse my-0" id="statusCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
@@ -154,7 +175,7 @@ const CollectionsFilter = () => {
                         <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#sample1Collapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Sample 1
-                            <i class="bi bi-chevron-up text-white menu-icon-right"></i>
+                            <i className="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
                         <div className="collapse my-0" id="sample1Collapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
@@ -168,7 +189,7 @@ const CollectionsFilter = () => {
                         <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#sample2Collapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Sample 2
-                            <i class="bi bi-chevron-up text-white menu-icon-right"></i>
+                            <i className="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
                         <div className="collapse my-0" id="sample2Collapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
@@ -182,7 +203,7 @@ const CollectionsFilter = () => {
                         <button className="btn text-white bg-black bg-opacity-25 collapseBtn collapsed border-0 d-flex justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#sample3Collapse" aria-expanded="false" aria-controls="collapseExample">
                             <span></span>
                             Sample 3
-                            <i class="bi bi-chevron-up text-white menu-icon-right"></i>
+                            <i className="bi bi-chevron-up text-white menu-icon-right"></i>
                         </button>
                         <div className="collapse my-0" id="sample3Collapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
