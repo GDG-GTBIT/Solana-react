@@ -8,7 +8,7 @@ const Card = (props) => {
     const [clicked,setClicked] = useState(false);
 
     useEffect(()=>{
-        console.log(props.id," ",props.visible);
+        // console.log(props.id," ",props.visible);
         setClicked(props.visible);
     },[]);
 

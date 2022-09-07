@@ -8,13 +8,13 @@ const CardArea = () => {
 
   useEffect(()=>{
     setCardsArr(JSON.parse(localStorage.getItem("cards")));
-    console.log("useEffect",cardsArr);
+    // console.log("useEffect",cardsArr);
   },[]);
 
   useEffect(()=>{
     if(cardsArr == 1) return;
 
-    console.log("cardsArr",cardsArr);
+    // console.log("cardsArr",cardsArr);
     localStorage.setItem("cards",JSON.stringify(cardsArr));
   },[cardsArr]);
 
@@ -26,7 +26,7 @@ const CardArea = () => {
         [...Array(cardsLength)].map((e,i)=>{
           
           if(cardsArr.includes(i)){
-            console.log(cardsArr.includes(i));
+            // console.log(cardsArr.includes(i));
           return <Card key={i} cardsArr={cardsArr} id={i} visible={true} setCardsArr={setCardsArr}/>;
           
           }
