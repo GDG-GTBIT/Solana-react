@@ -1,0 +1,18 @@
+.topFilter {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    justify-content: space-between;
+}
+
+.inputTop {
+    width: 25%;
+}
+
+.searchBarCollections, .searchBarCollections:focus {
+    color: #fff !important;
+}
+
+.navbar-toggler {
+    display: none;
+}
