@@ -1,0 +1,72 @@
+
+.leftFilter {
+    display: flex;
+    flex-direction: row;
+    /* position: absolute;
+    left: 0; */
+    width: 25%;
+    height: auto;
+    z-index: 600;
+}
+
+.innerFilter {
+    width: 80%;
+}
+
+.innerFilter div {
+    margin: 15px 0;
+}
+
+.dropdown-toggle::after {
+    color: green;
+}
+
+.collapseBtn:focus, .collapseBtn:hover {
+    border: none;
+}
+
+.bi-chevron-up, .bi-chevron-down {
+    transition: all 0.3s ease;
+}
+
+.collapseBtn.collapsed .bi-chevron-up {
+    transform: rotate(180deg);
+}
+
+.collapseBtn.show .bi-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* .filterBtn {
+    border-radius: 20px;
+} */
+
+@media screen and (max-width: 1024px) {
+    .leftFilter {
+        width: 30%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .leftFilter {
+        position: absolute;
+        left: 0;
+        margin-left: 0;
+        width: 55%;
+        background-color: rgb(0,0,0);
+    }    
+
+    .innerFilter {
+        background-color: rgba(0,0,0,0.9);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .leftFilter {
+        width: 70%;
+    }   
+}

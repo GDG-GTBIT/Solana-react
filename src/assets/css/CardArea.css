@@ -15,7 +15,7 @@
 }
 .cardarea{
     /* border: 1px solid white; */
-    /* min-height:80vh; */
+    /* min-height:1000px; */
     width:73vw;
     /* position:relative;
     top:20vh;
@@ -24,20 +24,20 @@
     flex-wrap: wrap;
     display:flex;
     justify-content: center;
-    align-items: center;
-    margin-left: 25%;
+    align-items: flex-start;
+    /* margin-left: 25%; */
 }
 
 @media screen and (max-width: 1024px) {
     .cardarea{
         width:68vw;
-        margin-left: 30%;
+        /* margin-left: 30%; */
     }
 }
 
 @media screen and (max-width: 768px) {
     .cardarea{
         width:96vw;
-        margin-left: 2%;
+        /* margin-left: 2%; */
     }
 }

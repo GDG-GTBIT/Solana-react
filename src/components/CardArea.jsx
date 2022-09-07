@@ -25,7 +25,7 @@ const CardArea = () => {
 
         [...Array(cardsLength)].map((e,i)=>{
           
-          if(cardsArr.includes(i)){
+          if(cardsArr && cardsArr.includes(i)){
             // console.log(cardsArr.includes(i));
           return <Card key={i} cardsArr={cardsArr} id={i} visible={true} setCardsArr={setCardsArr}/>;
           
