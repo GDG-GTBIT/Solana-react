@@ -12,7 +12,7 @@ const CardArea = () => {
   },[]);
 
   useEffect(()=>{
-    if(cardsArr == 1) return;
+    if(cardsArr === 1) return;
 
     // console.log("cardsArr",cardsArr);
     localStorage.setItem("cards",JSON.stringify(cardsArr));
@@ -21,7 +21,7 @@ const CardArea = () => {
   return (
     <div className="cardarea">
         { 
-        cardsArr==1?"":
+        cardsArr===1?"":
 
         [...Array(cardsLength)].map((e,i)=>{
           

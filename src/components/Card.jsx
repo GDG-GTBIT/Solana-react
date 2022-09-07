@@ -37,7 +37,6 @@ const Card = (props) => {
         // background: "grey", 
         display: "flex",
         alignItems:"center",
-        borderRadius:"5%",
         color: "white",
         marginRight:"2%",
         marginBottom:"2%",
@@ -48,7 +47,7 @@ const Card = (props) => {
         borderRadius: "10px",
         border: "1px solid rgba( 255, 255, 255, 0.18 )"
         }}>
-            <img class="card-img-top" src={NFT1} alt="Card image cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
+            <img class="card-img-top" src={NFT1} alt="Card cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
             marginTop:"5%"
             }} />
             <div class="card-body" style={{
@@ -81,7 +80,7 @@ const Card = (props) => {
                 </div>
                 <div class="card-text">
                     {/* XXXX */}
-                    {clicked == false? 
+                    {clicked === false? 
                     <i class="bi bi-heart" onClick={()=>{handleClick(true)}}></i>
                     : 
                     <i class="bi bi-heart-fill" onClick={()=>{handleClick(false)}}></i>
