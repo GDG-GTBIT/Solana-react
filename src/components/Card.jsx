@@ -10,9 +10,10 @@ const Card = (props) => {
     useEffect(()=>{
         // console.log(props.id," ",props.visible);
         setClicked(props.visible);
-    },[]);
+    },[clicked]);
 
     function handleClick(check){
+        console.log(props.id)
         setClicked(check);
         if(check){
             // props.cardsArr.push(props.id);
@@ -26,8 +27,11 @@ const Card = (props) => {
                     arr.splice(i, 1); 
                 }
             }
+            
             props.setCardsArr([...arr]);
         }
+        console.log(props.cardsArr,'array')
+            localStorage.setItem('cards',JSON.stringify(props.cardsArr));
         
     }
     return (
@@ -80,10 +84,10 @@ const Card = (props) => {
                 </div>
                 <div class="card-text">
                     {/* XXXX */}
-                    {clicked === false? 
-                    <i class="bi bi-heart" onClick={()=>{handleClick(true)}}></i>
-                    : 
+                    {props.cardsArr.includes(props.id)? 
                     <i class="bi bi-heart-fill" onClick={()=>{handleClick(false)}}></i>
+                    : 
+                    <i class="bi bi-heart" onClick={()=>{handleClick(true)}}></i>
                     }
                     
                     

@@ -4,19 +4,20 @@ import '../assets/css/CardArea.css';
 
 const CardArea = () => {
   const [cardsLength,setCardsLength] = useState(8);
-  const [cardsArr,setCardsArr] = useState(1);
+  const [cardsArr,setCardsArr] = useState([]);
 
   useEffect(()=>{
     setCardsArr(JSON.parse(localStorage.getItem("cards")));
+    console.log(JSON.parse(localStorage.getItem("cards")), "localstorage value")
     // console.log("useEffect",cardsArr);
   },[]);
 
-  useEffect(()=>{
-    if(cardsArr === 1) return;
+  // useEffect(()=>{
+  //   if(cardsArr === null) return;
 
-    // console.log("cardsArr",cardsArr);
-    localStorage.setItem("cards",JSON.stringify(cardsArr));
-  },[cardsArr]);
+  //   // console.log("cardsArr",cardsArr);
+  //   localStorage.setItem("cards",JSON.stringify(cardsArr));
+  // },[cardsArr]);
 
   return (
     <div className="cardarea">
