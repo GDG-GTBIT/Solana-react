@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/CollectionsFilter.css';
+import '../assets/css/collectionsFilter.css';
 
 const CollectionsFilter = () => {
 
