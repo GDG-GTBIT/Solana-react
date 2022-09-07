@@ -10,7 +10,7 @@
   height: auto;
   color: #fff;
   font-weight: 600;
-  background: #d9d9d953;
+  background: rgb(17, 16, 16);
   padding: 10px;
 }
 .navbarReponsive{
@@ -38,6 +38,11 @@
   font-family: 'Almendra SC', serif;
   font-weight: 600;
 }
+
+.navbarHomeSection2Span a{
+  text-decoration: none;
+  color: white;
+}
 .navbarHomeSection2SearchContainer{
   height: 40px;
   display: flex;
@@ -58,10 +63,33 @@
   gap: 20px;
   align-items: center;
 }
+.navbarHomeSection2part3 a{
+  text-decoration: none;
+  color: white;
+}
+.nav-mob-list a{
+  color:#fff ;
+  text-decoration:none;
+}
+.nav-mob-list a{
+  color:#fff ;
+  text-decoration:none;
+}
+.navbarResponsiveFlex{
+  display: flex;
+  height: auto;
+  text-decoration: none !important;
+  color: #fff !important;
+  flex-direction: column;
+  gap: 10px;
+}
+.navbarResponsiveFlex li{
+  color: #fff !important;
+}
 
 /* CSS for Responsive Navbar */
 .navbar{
-  background: #d9d9d953 !important;
+  background: rgb(17, 16, 16) !important;
   padding: 0% !important;
   z-index: 10;
 }
@@ -69,6 +97,9 @@
 @media screen and (max-width: 1000px){
   .navbarHomeContainer{
     display: none;
+  }
+  .navbarReponsiveButton{
+    display: block !important;
   }
   .navbarReponsive{
     display: block;

@@ -8,9 +8,9 @@ function Sort() {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">Spooky</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Winter</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Extra</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

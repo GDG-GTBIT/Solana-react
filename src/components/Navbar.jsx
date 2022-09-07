@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/css/NavbarHome.css";
+import { Link } from "react-router-dom";
 import tiger_icon from "../assets/images/tiger_icon_nav.png";
 import GDSC_icon from "../assets/images/GDSC_icon.png";
 function Navbar() {
@@ -8,15 +9,20 @@ function Navbar() {
       <nav className="navbarHomeContainer">
         <div className="navbarHomeContainer1">
           <div className="navbarTigerIconContainer">
-            <img
-              className="navbarTigerIcon"
-              src={tiger_icon}
-              alt="tiger icon"
-            />
+            <Link to={"/"}>
+              <img
+                className="navbarTigerIcon"
+                src={tiger_icon}
+                alt="tiger icon"
+              />
+            </Link>
           </div>
           <div className="navbarHomeSection2">
             <div>
-              <span className="navbarHomeSection2Span">TigerDev</span> X GTBIT
+              <span className="navbarHomeSection2Span">
+                <Link to={"/"}>TigerDev</Link>{" "}
+              </span>{" "}
+              X GTBIT
             </div>
             <div className="navbarHomeSection2SearchContainer">
               <i className="bi bi-search"></i>
@@ -27,9 +33,14 @@ function Navbar() {
               ></input>
             </div>
             <div className="navbarHomeSection2part3">
-              <div>COLLECTION</div>
+              <div>
+                <Link to={"/Collections"}>COLLECTION</Link>
+              </div>
               {/* <div>MINT NOW</div> */}
               <div>WHITE PAPER</div>
+              <div>
+                <Link to={"/team"}>TEAM</Link>
+              </div>
               <div>ABOUT</div>
               <div>
                 <i className="bi bi-person-circle"></i>
@@ -56,7 +67,7 @@ function Navbar() {
             </div>
           </a>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler navbarReponsiveButton"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasDarkNavbar"
@@ -71,7 +82,13 @@ function Navbar() {
             aria-labelledby="offcanvasDarkNavbarLabel"
           >
             <div className="offcanvas-header">
-              <img className="navbarGDSCIcon" src={GDSC_icon} alt="GDSC LOGO" />
+              <Link to={"/"}>
+                <img
+                  className="navbarGDSCIcon"
+                  src={GDSC_icon}
+                  alt="GDSC LOGO"
+                />
+              </Link>
               <button
                 type="button"
                 className="btn-close btn-close-white"
@@ -79,41 +96,37 @@ function Navbar() {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="offcanvas-body">
-              <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
-                    COLLECTION
-                  </a>
-                </li>
-                {/* <li className="nav-item">
+            <div className="offcanvas-body navbarResponsiveFlex">
+              <div className="nav-mob-list">
+                <Link to={"/"}>Home</Link>
+              </div>
+
+              <div className="nav-mob-list">
+                <Link to={"/Collections"}>COLLECTION</Link>
+              </div>
+              {/* <div >
                   <a className="nav-link" href="#">
-                    MINT NOW
+                  MINT NOW
                   </a>
-                </li> */}
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    WHITE PAPER
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    ABOUT
-                  </a>
-                </li>
-              </ul>
+                </div> */}
+              <div className="nav-mob-list" >WHITE PAPER</div>
+              <div className="nav-mob-list">
+                <Link to={"/team"}>TEAM</Link>
+              </div>
+              <div className="nav-mob-list">ABOUT</div>
               <form className="d-flex" role="search">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search items, Collections"
-                  aria-label="Search"
-                />
-                <button className="btn btn-success" type="submit">
-                  Search
-                </button>
-              </form>
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search items, Collections"
+                aria-label="Search"
+              />
+              <button className="btn btn-success" type="submit">
+                Search
+              </button>
+            </form>
             </div>
+            
           </div>
         </div>
       </nav>
