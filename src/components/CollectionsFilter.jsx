@@ -16,7 +16,7 @@ const CollectionsFilter = () => {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <i class="bi bi-grid-fill fa-md text-white" style={{fontSize: "20px"}}></i>
+                    <i className="bi bi-grid-fill fa-md text-white" style={{fontSize: "20px"}}></i>
                 </button>
                 <div className="input-group inputTop bg-transparent rounded-pill border border-white">
                     <span className="input-group-text border-0 bg-transparent" id="search-addon">
@@ -31,7 +31,7 @@ const CollectionsFilter = () => {
                         <i className="bi bi-arrow-down-up text-success px-2"></i>
                         Sort By
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
                         <button className="dropdown-item" type="button">Random 1</button>
                         <button className="dropdown-item" type="button">Random 2</button>
                         <button className="dropdown-item" type="button">Random 3</button>

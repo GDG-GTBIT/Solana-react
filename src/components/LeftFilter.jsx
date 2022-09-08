@@ -26,7 +26,7 @@ const LeftFilter = () => {
                         <button className="btn rounded-pill bg-transparent bg-opacity-10 border text-white dropdown-toggle w-75" type="button" id="dropdownMenu2" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Price
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
                             <button className="dropdown-item" type="button">Random 1</button>
                             <button className="dropdown-item" type="button">Random 2</button>
                             <button className="dropdown-item" type="button">Random 3</button>
@@ -83,7 +83,7 @@ const LeftFilter = () => {
                         <div className="collapse my-0 show" id="themeCollapse">
                             <hr className="w-75 text-white m-0 mx-auto"/>
                             <div className="card card-body my-0 bg-black bg-opacity-25 d-flex flex-column justify-content-center">
-                                <div class="input-group rounded-pill border border-white mt-0">
+                                <div className="input-group rounded-pill border border-white mt-0">
                                     <span className="input-group-text border-0 bg-transparent" id="search-addon">
                                         <i className="bi bi-search text-success"></i>
                                     </span>
