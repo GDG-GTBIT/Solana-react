@@ -2,68 +2,55 @@ import React,{useEffect,useState} from 'react';
 import Card from './Card';
 import '../assets/css/CardArea.css';
 import axios from 'axios';
-// import firebase from "firebase";
-// import 'firebase/database';
-// import { faCommentsDollar } from '@fortawesome/free-solid-svg-icons';
 import { onValue, ref } from 'firebase/database';
 import { db } from '../firebase';
-
-// const url = "https://testing-c8f6a-default-rtdb.firebaseio.com";
-
-// const databaseRef = firebase.database().ref();
-
-// faCommentsDollar.log(databaseRef);
-
+import { Link } from 'react-router-dom';
 
 const CardArea = () => {
   const [cardsLength,setCardsLength] = useState(8);
-  const [cardsArr,setCardsArr] = useState(1);
+  const [cardsArr,setCardsArr] = useState([]);
   const [formData, setformData] = useState([])
+  const reloadApi = false
 
   
   useEffect(()=>{
-    
-    let arr = [];
-    for(let i =0 ; i<50;i++){
-
-      onValue(ref(db , `${i}`),(snapshot)=>{
+    const tempoFucntion = async()=>{
+    // let arr = [];
+    // for(let i =0 ; i<50;i++){
+      console.log(db);
+       onValue(ref(db , `/`),(snapshot)=>{
         const data = snapshot.val();
-        console.log(data);
-        arr.push(data);
+        // console.log(data);
+        // arr.push(data);
+        // console.log(arr,"kkkjkj")
+        setformData(data);
       })
-    }
-    setformData(arr);
+    // }
+    // console.log(arr,"array fetched")
+    
     setCardsArr(JSON.parse(localStorage.getItem("cards")));
-    // console.log("useEffect",cardsArr);
-
-    // axios.get(url).then((response)=>{
-    //   console.log(response.data);
-    // });
-
-  },[]);
-  console.log(formData);
-  useEffect(()=>{
-    if(cardsArr === 1) return;
-
-    // console.log("cardsArr",cardsArr);
-    localStorage.setItem("cards",JSON.stringify(cardsArr));
-  },[cardsArr]);
+    console.log(JSON.parse(localStorage.getItem("cards")), "localstorage value")
+  }
+  tempoFucntion();
+    console.log(formData , 'Form Data');
+  },[reloadApi]);
+  
 
   return (
     <div className="cardarea">
         { 
         
         // [...Array(cardsLength)]
-        cardsArr===1?"":
+        // cardsArr===1?"":
         formData.map((e,i)=>{
-          console.log(e);
-          if(cardsArr && cardsArr.includes(i)){
+          // console.log(e);
+          // if(cardsArr && cardsArr.includes(i)){
             // console.log(cardsArr.includes(i));
-          return <Card key={i} cardsArr={cardsArr} id={i} visible={true} data={e} setCardsArr={setCardsArr}/>;          
-          }
+          return <Link to="/CollectionDescription"><Card key={i} cardsArr={cardsArr} id={i} visible={true} data={e} setCardsArr={setCardsArr}/></Link>;          
+          // }
           
-          else
-          return <Card key={i} cardsArr={cardsArr} id={i} visible={false} data={e} setCardsArr={setCardsArr}/>;
+          // else
+          // return <Card key={i} cardsArr={cardsArr} id={i} visible={false} data={e} setCardsArr={setCardsArr}/>;
         })}
     </div>
   )

@@ -10,9 +10,10 @@ const Card = (props) => {
     useEffect(()=>{
         // console.log(props.id," ",props.visible);
         setClicked(props.visible);
-    },[]);
+    },[clicked]);
 
     function handleClick(check){
+        console.log(props.id)
         setClicked(check);
         if(check){
             // props.cardsArr.push(props.id);
@@ -26,13 +27,16 @@ const Card = (props) => {
                     arr.splice(i, 1); 
                 }
             }
+            
             props.setCardsArr([...arr]);
         }
+        console.log(props.cardsArr,'array')
+            localStorage.setItem('cards',JSON.stringify(props.cardsArr));
         
     }
     return (
         
-        <div class="card" style={{
+        <div className="card" style={{
         width: "12rem", 
         // background: "grey", 
         display: "flex",
@@ -48,28 +52,28 @@ const Card = (props) => {
         border: "1px solid rgba( 255, 255, 255, 0.18 )"
         }}>
             {/* , backgroundImage:`url(${NFT2Back})` */}
-            <img class="card-img-top" src={props.data.image} alt="Card cap" style={{borderRadius:"5%", backgroundSize:"cover", width:"90%", 
+            <img class="card-img-top" src={props.data?props.data.image:""} alt="Card cap" style={{borderRadius:"5%", backgroundSize:"cover", width:"90%", 
             marginTop:"5%"
             }} />
-            <div class="card-body" style={{
+            <div className="card-body" style={{
                 display: "flex",
                 justifyContent: "space-between",
                 width: "100%",
                 paddingBottom:"0",
                 paddingRight:"5px"
             }}>
-                <div class="card-text" >
+                <div className="card-text" >
                     <h5>
-                    {props.data.name}
+                    {props.data?props.data.name:""}
                     </h5>
                 </div>
-                <div class="card-text">
+                <div className="card-text">
                    <button type="button"  style = {{borderRadius:"25%", background:"lightgreen",border:"none",color:"white"}}>BUY NOW</button>
                 </div>
                 
             </div>
 
-            <div class="card-body" style={{
+            <div className="card-body" style={{
                 display: "flex",
                 justifyContent: "space-between",
                 width: "100%",
@@ -81,27 +85,25 @@ const Card = (props) => {
                 </div> */}
                 <div class="card-text">
                     {/* XXXX */}
-                    {clicked === false? 
-                    <i class="bi bi-heart" onClick={()=>{handleClick(true)}}></i>
-                    : 
-                    <i class="bi bi-heart-fill" onClick={()=>{handleClick(false)}}></i>
-                    }
-                    
-                    
+                    {/* {props.cardsArr.includes(props.id)?  */}
+                    {/* <i className="bi bi-heart-fill" onClick={()=>{handleClick(false)}}></i> */}
+                    {/* :  */}
+                    <i className="bi bi-heart" onClick={()=>{handleClick(true)}}></i>
+                    {/* } */}
                 </div>
             </div>
 
-            <div class="card-body" style={{
+            <div className="card-body" style={{
                 display: "flex",
                 justifyContent: "space-between",
                 width: "100%",
                 paddingTop:"0"
             }}>
-                <div class="card-text">
+                <div className="card-text">
                     Floor Price
                 </div>
                 <div class="card-text">
-                    {props.data.value}
+                    {props.data?props.data.value:""}
                 </div>
             </div>
         </div>

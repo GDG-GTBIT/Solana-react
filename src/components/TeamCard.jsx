@@ -3,10 +3,10 @@ import '../assets/css/Card.css';
 import NFT1 from "../assets/images/NFT1.png";
 import NFT2Back from "../assets/images/NFT2BACKGROUND.png";
 
-const TeamCard = () => {
+const TeamCard = (props) => {
     return (
         
-        <div class="card" style={{
+        <div className="card" style={{
         width: "15rem", 
         background: "White", 
         display: "flex",
@@ -17,53 +17,59 @@ const TeamCard = () => {
         marginBottom:"2%",
         fontSize:"14px"
         }}>
-            <img class="card-img-top" src={NFT1} alt="Card cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
+            <img className="card-img-top" src={NFT1} alt="Card cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
             marginTop:"5%"
             }} />
-            <div class="card-body" style={{
+            <div className="card-body" style={{
                 display: "flex",
                 justifyContent: "space-between",
                 width: "100%",
                 paddingBottom:"0",
                 paddingRight:"5px"
             }}>
-                <div class="card-text" >
+                <div className="card-text" >
                     <h5>
-                    Name
+                    Name : {props.formData?.Name}
                     </h5>
                 </div>
                 
             </div>
 
-            <div class="card-body" style={{
+            <div className="card-body" style={{
                 display: "flex",
                 justifyContent: "space-between",
                 width: "100%",
                 paddingBottom:"0",
                 paddingTop:"0"
             }}>
-                <div class="card-text">
-                    Designation
+                <div className="card-text">
+                    Designation : {props.formData?.Designation}
                 </div>
-                <div class="card-text">
+                <div className="card-text">
                     
                 </div>
             </div>
 
-            <div class="card-body" style={{
+            <div className="card-body" style={{
                 display: "flex",
                 justifyContent: "space-between",
                 width: "100%",
                 paddingTop:"10px"
             }}>
-                <div class="card-text">
-                    <span className='bi bi-instagram text-dark'></span>
+                <div className="card-text">
+                    <a href={props.formData?.InstagramUrl}>
+                        <span className='bi bi-instagram text-dark'></span>
+                    </a>
                 </div>
-                <div class="card-text">
-                <span className='bi bi-linkedin text-dark'></span>
+                <div className="card-text">
+                    <a href={props.formData?.LinkedinUrl}>
+                    <span className='bi bi-linkedin text-dark'></span>
+                    </a>
                 </div>
-                <div class="card-text">
-                <span className='bi bi-twitter text-dark'></span>
+                <div className="card-text">
+                    <a href={props.formData?.TwitterUrl}>
+                    <span className='bi bi-twitter text-dark'></span>
+                    </a>
                 </div>
             </div>
         </div>
