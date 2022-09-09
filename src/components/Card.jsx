@@ -83,12 +83,12 @@ const Card = (props) => {
                     XXXX
                 </div>
                 <div class="card-text">
-                    {/* XXXX */}
+                    {/* XXXX
                     {props.cardsArr.includes(props.id)? 
                     <i class="bi bi-heart-fill" onClick={()=>{handleClick(false)}}></i>
-                    : 
-                    <i class="bi bi-heart" onClick={()=>{handleClick(true)}}></i>
-                    }
+                    :  */}
+                    <i class="bi bi-heart"></i>
+                    {/* // } */}
                     
                     
                 </div>
