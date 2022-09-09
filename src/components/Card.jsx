@@ -47,7 +47,8 @@ const Card = (props) => {
         borderRadius: "10px",
         border: "1px solid rgba( 255, 255, 255, 0.18 )"
         }}>
-            <img class="card-img-top" src={NFT1} alt="Card cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
+            {/* , backgroundImage:`url(${NFT2Back})` */}
+            <img class="card-img-top" src={props.data.image} alt="Card cap" style={{borderRadius:"5%", backgroundSize:"cover", width:"90%", 
             marginTop:"5%"
             }} />
             <div class="card-body" style={{
@@ -59,7 +60,7 @@ const Card = (props) => {
             }}>
                 <div class="card-text" >
                     <h5>
-                    XXXX
+                    {props.data.name}
                     </h5>
                 </div>
                 <div class="card-text">
@@ -75,9 +76,9 @@ const Card = (props) => {
                 paddingBottom:"0",
                 paddingTop:"0"
             }}>
-                <div class="card-text">
+                {/* <div class="card-text">
                     XXXX
-                </div>
+                </div> */}
                 <div class="card-text">
                     {/* XXXX */}
                     {clicked === false? 
@@ -100,7 +101,7 @@ const Card = (props) => {
                     Floor Price
                 </div>
                 <div class="card-text">
-                    XXXX
+                    {props.data.value}
                 </div>
             </div>
         </div>
