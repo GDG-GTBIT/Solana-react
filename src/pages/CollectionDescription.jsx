@@ -3,7 +3,74 @@ import mainImage from "../assets/images/NFT_img.png";
 import Card from "../components/Card";
 import "../assets/css/collectiondescription.css";
 import { Link, useLocation } from "react-router-dom";
+import idl from '../idl.json';
+import {Connection, PublicKey, clusterApiUrl} from '@solana/web3.js';
+import {Program, AnchorProvider, web3, utils ,BN} from '@project-serum/anchor';
+
+
+import {Buffer} from 'buffer';
+window.Buffer = Buffer;   
+
+
+const programID =new PublicKey(idl.metadata.address);
+const network = clusterApiUrl('devnet');
+const opts ={
+  prefLightCommitment: 'processed',
+};
+const {SystemProgram} = web3;
+
 const CollectionDescription = () => {
+  
+  const getProvider = () => {
+    const connection = new Connection( network, opts.prefLightCommitment);
+    const provider = new AnchorProvider( connection, window.solana, opts.prefLightCommitment);
+
+    return provider;
+  }
+
+  
+
+  const buy = async publicKey =>{
+    try {
+      const provider = getProvider();
+      const program = new Program(idl, programID, provider)
+
+      const amounttopay = new BN( 3.6 * web3.LAMPORTS_PER_SOL);
+      const slotsbooked = new BN(1);
+
+      await program.rpc.donate( amounttopay, slotsbooked, {
+        accounts:{
+          campaign: publicKey,
+          user: provider.wallet.publicKey,
+          systemProgram: SystemProgram.programId,
+        }
+      });
+
+      console.log("Donate amount to", publicKey.toString());
+
+    }catch(error) {
+      console.error(error);
+    } 
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   const [refresh, setRefresh] = useState(false);
   const location = useLocation();
@@ -36,6 +103,7 @@ const CollectionDescription = () => {
     }
 
   }
+
 
   return (
     <div className="collection d-flex col justify-content-center ">
@@ -101,7 +169,7 @@ const CollectionDescription = () => {
                 <span className=" priceDollar text-muted d-flex align-items-center px-3">($XXXX)</span>
                 </div>
                 <div class="buttons">
-                  <button class="btn-hover color-1">Buy Now</button>
+                  <button  onClick={() => buy('6QBzG1PLm2RrQfReAEZvStRpKNVzsMkU5pEfboRvZsVS')} class="btn-hover color-1">Buy Now</button>
                   <button class="color-2">Make Offer</button>
                 </div>
               </div> 
