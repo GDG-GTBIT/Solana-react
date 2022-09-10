@@ -26,7 +26,7 @@ function Navbar() {
           setWalletAddress(response.publicKey.toString());
         }
       } else {
-        console.log("Get a phantom wallet");
+        alert("Get A Phantom wallet!")
       }
     } catch (error) {
       console.error(error);

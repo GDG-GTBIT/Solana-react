@@ -7,7 +7,7 @@ import Wrapper from  '../components/Wrapper';
 
 const Collections = (props) => {
   return (
-    <div class="collections">
+    <div className="collections">
         <CollectionsFilter />
         <Wrapper>
           {/* <LeftFilter /> */}
