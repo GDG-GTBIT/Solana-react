@@ -16,11 +16,13 @@
 .cardarea{
     /* border: 1px solid white; */
     /* min-height:1000px; */
-    width:73vw;
+    
     /* position:relative;
     top:20vh;
     left:30vw; */
     /* background: black; */
+    width:90vw;
+    margin-left:5vw;
     flex-wrap: wrap;
     display:flex;
     justify-content: center;

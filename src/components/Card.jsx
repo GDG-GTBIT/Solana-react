@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 // import '../assets/css/Card.css';
 import NFT1 from "../assets/images/NFT1.png";
 import NFT2Back from "../assets/images/NFT2BACKGROUND.png";
@@ -6,6 +7,7 @@ import NFT2Back from "../assets/images/NFT2BACKGROUND.png";
 
 const Card = (props) => {
     const [clicked,setClicked] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(()=>{
         // console.log(props.id," ",props.visible);
@@ -34,6 +36,9 @@ const Card = (props) => {
             localStorage.setItem('cards',JSON.stringify(props.cardsArr));
         
     }
+    const toComponentDesc=()=>{
+        navigate('/CollectionDescription',{state:{data:props.data,formData:props.formData}});
+    }
     return (
         
         <div className="card" style={{
@@ -51,7 +56,8 @@ const Card = (props) => {
         borderRadius: "10px",
         border: "1px solid rgba( 255, 255, 255, 0.18 )"
         }}>
-            <img className="card-img-top" src={NFT1} alt="Card cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
+            {/* , backgroundImage:`url(${NFT2Back})` */}
+            <img class="card-img-top" src={props.data?props.data.image:""} alt="Card cap" style={{borderRadius:"5%", backgroundSize:"cover", width:"90%", 
             marginTop:"5%"
             }} />
             <div className="card-body" style={{
@@ -62,12 +68,12 @@ const Card = (props) => {
                 paddingRight:"5px"
             }}>
                 <div className="card-text" >
-                    <h5>
-                    XXXX
-                    </h5>
+                    <h6>
+                    {props.data?props.data.name:""}
+                    </h6>
                 </div>
                 <div className="card-text">
-                   <button type="button"  style = {{borderRadius:"25%", background:"lightgreen",border:"none",color:"white"}}>BUY NOW</button>
+                   <a onClick={()=>{toComponentDesc()}}><button type="button"  style = {{borderRadius:"25%", background:"lightgreen",border:"none",color:"white"}}>BUY NOW</button></a>
                 </div>
                 
             </div>
@@ -79,17 +85,16 @@ const Card = (props) => {
                 paddingBottom:"0",
                 paddingTop:"0"
             }}>
-                <div className="card-text">
+                {/* <div class="card-text">
                     XXXX
-                </div>
+                </div> */}
                 <div class="card-text">
-                    {/* XXXX
-                    {props.cardsArr.includes(props.id)? 
-                    <i class="bi bi-heart-fill" onClick={()=>{handleClick(false)}}></i>
-                    :  */}
-                    <i class="bi bi-heart"></i>
-                    {/* // } */}
-
+                    {/* XXXX */}
+                    {/* {props.cardsArr.includes(props.id)?  */}
+                    {/* <i className="bi bi-heart-fill" onClick={()=>{handleClick(false)}}></i> */}
+                    {/* :  */}
+                    <i className="bi bi-heart" onClick={()=>{handleClick(true)}}></i>
+                    {/* } */}
                 </div>
             </div>
 
@@ -102,8 +107,8 @@ const Card = (props) => {
                 <div className="card-text">
                     Floor Price
                 </div>
-                <div className="card-text">
-                    XXXX
+                <div class="card-text">
+                    {props.data?props.data.value:""}
                 </div>
             </div>
         </div>

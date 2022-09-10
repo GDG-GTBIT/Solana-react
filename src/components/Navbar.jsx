@@ -1,9 +1,60 @@
 import React from "react";
+import {useEffect,useState} from 'react';  
 import "../assets/css/NavbarHome.css";
 import { Link } from "react-router-dom";
 import tiger_icon from "../assets/images/tiger_icon_nav.png";
 import GDSC_icon from "../assets/images/GDSC_icon.png";
+
 function Navbar() {
+  const [walletAddress, setWalletAddress] = useState(null);
+
+  const checkIfWalletIsConnected = async () => {
+    try {
+      const { solana } = window;
+
+      if (solana) {
+        if (solana.isPhantom) {
+          console.log("Wallet Found");
+          alert("Wallet already connected !! ")
+
+          const response = await solana.connect({ onlyIfTrusted: true });
+
+          console.log(
+            "connected with publickey:",
+            response.publicKey.toString()
+          );
+          setWalletAddress(response.publicKey.toString());
+        }
+      } else {
+        alert("Get A Phantom wallet!")
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const connectWallet = async () => {
+    const { solana } = window;
+   await checkIfWalletIsConnected();
+    if (solana) {
+      const response = await solana.connect();
+      console.log("connected with public key", response.publicKey);
+      // if(response.publicKey.toString())
+      console.log(response)
+      setWalletAddress(response.publicKey.toString());
+
+    }
+  };
+
+  // useEffect(() => {
+  //   const onLoad = async () => {
+  //     await checkIfWalletIsConnected();
+  //   };
+
+  //   window.addEventListener("load", onLoad);
+  //   return () => window.removeEventListener("load", onLoad);
+  // }, []);
+
   return (
     <div>
       <nav className="navbarHomeContainer">
@@ -46,7 +97,7 @@ function Navbar() {
                 <i className="bi bi-person-circle"></i>
               </div>
               <div>
-                <i className="bi bi-wallet"></i>
+                <i onClick={connectWallet} className="bi bi-wallet"></i>
               </div>
             </div>
           </div>
@@ -109,24 +160,31 @@ function Navbar() {
                   MINT NOW
                   </a>
                 </div> */}
-              <div className="nav-mob-list" >WHITE PAPER</div>
+              <div className="nav-mob-list">WHITE PAPER</div>
               <div className="nav-mob-list">
                 <Link to={"/team"}>TEAM</Link>
               </div>
               <div className="nav-mob-list">ABOUT</div>
+              <div className="person_wallet_box">
+                <div>
+                  <i className="bi bi-person-circle"></i>
+                </div>
+                <div>
+                  <i className="bi bi-wallet"></i>
+                </div>
+              </div>
               <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search items, Collections"
-                aria-label="Search"
-              />
-              <button className="btn btn-success" type="submit">
-                Search
-              </button>
-            </form>
+                <input
+                  className="form-control me-2"
+                  type="search"
+                  placeholder="Search items, Collections"
+                  aria-label="Search"
+                />
+                <button className="btn btn-success" type="submit">
+                  Search
+                </button>
+              </form>
             </div>
-            
           </div>
         </div>
       </nav>
