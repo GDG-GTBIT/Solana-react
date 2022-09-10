@@ -9,7 +9,7 @@ function Hero() {
         <div className = "heroContainerPart1">
           <div className= "heroContainerText">Be one of the first 3 people to buy this <span className = "heroContainerSpan">NFT</span></div>
           <div className = "heroContainerText2">and get a 10$ bonus along with the purchase</div>
-          <div className = "heroContainerText3">The price of NFT : <span className="heroContainerTextspan">23 $</span> <i class="bi bi-arrow-right-short"></i> 18 $ </div>
+          <div className = "heroContainerText3">The price of NFT : <span className="heroContainerTextspan">23 $</span> <i className="bi bi-arrow-right-short"></i> 18 $ </div>
           <button className = "heroContainerButton">Mint Now</button>
           <Counter />
         </div>
