@@ -12,6 +12,8 @@
   font-weight: 600;
   background: rgb(17, 16, 16);
   padding: 10px;
+  position: fixed;
+  z-index: 1000;
 }
 .navbarReponsive{
   display: none;

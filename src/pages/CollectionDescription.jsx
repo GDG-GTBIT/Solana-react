@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import mainImage from "../assets/images/NFT_img.png";
 import Card from "../components/Card";
 import "../assets/css/collectiondescription.css";
+import { Link, useLocation } from "react-router-dom";
 const CollectionDescription = () => {
 
   const [refresh, setRefresh] = useState(false);
+  const location = useLocation();
 
   useEffect(()=>{
     console.log("refreshed");
-  },[refresh])
+    if(location!=null && location.state)
+    console.log(location.state.formData);
+  },[refresh]);
 
   const handleRefresh = () =>{
     refresh === true?setRefresh(false):setRefresh(true);
@@ -37,7 +41,7 @@ const CollectionDescription = () => {
     <div className="collection d-flex col justify-content-center ">
       <div className="collection__container d-flex flex-wrap align-items-start  ">
         <div className="collection__image  d-flex justify-content-center m-5 ">
-          <img src={mainImage}  alt="fireSpot" />
+          <img src={location?.state?.data?.image}  alt="fireSpot" style={{height:"277px",width:"282px"}}/>
         </div>
         <div className="collection__info m-5">
           <div className="info__gdsc d-flex flex-wrap justify-content-between ">
@@ -59,7 +63,7 @@ const CollectionDescription = () => {
             </div>
           </div>
           <div className="info__title ">
-            <h1 className="info__heading px-3">Himalyan Tiger NFT</h1>
+            <h1 className="info__heading px-3">{location?.state?.data?.name}</h1>
           </div>
           <div className="info__ownerViews d-flex p-3 ">
             <p>Owned by </p>
@@ -86,13 +90,13 @@ const CollectionDescription = () => {
                 <i class="bi bi-clock px-3">
                   
                 </i>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                {location?.state?.data?.description}</span>
               </div>
 
               <div className="col currentPriceCol  justify-content-start align-items-start px-4 py-2">
                 <h1>Current price</h1>
                 <div className="d-flex">
-                <h2>XXXX</h2>
+                <h2>{location?.state?.data?.value}</h2>
                 
                 <span className=" priceDollar text-muted d-flex align-items-center px-3">($XXXX)</span>
                 </div>
@@ -103,7 +107,7 @@ const CollectionDescription = () => {
               </div> 
           </div>
         </div>
-        
+        aboutDescText
         
       </div>
       <div className="info__priceBox increaseWidth m-5">
@@ -121,15 +125,15 @@ const CollectionDescription = () => {
                 
                 <div className=" cardsPrice d-flex px-4 justify-content-around ">
                 
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+                <Card key={0} id={0} visible={true} formData={location.state?location.state.formData:""} data={location.state?location?.state?.formData[0]:""}/>
+                <Card key={1} id={1} visible={true} formData={location.state?location.state.formData:""} data={location.state?location?.state?.formData[1]:""}/>
+                <Card key={2} id={2} visible={true} formData={location.state?location.state.formData:""} data={location.state?location?.state?.formData[2]:""}/>
+                <Card key={3} id={3} visible={true} formData={location.state?location.state.formData:""} data={location.state?location?.state?.formData[3]:""}/>
                 
                 </div>
                 <div class="buttons">
                   
-                  <button class="color-2">View Collections</button>
+                  <Link to="/Collections"><button class="color-2">View Collections</button></Link>
                 </div>
               </div> 
           </div>

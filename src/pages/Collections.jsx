@@ -5,13 +5,13 @@ import CollectionsFilter from '../components/CollectionsFilter';
 import LeftFilter from '../components/LeftFilter';
 import Wrapper from  '../components/Wrapper';
 
-const Collections = () => {
+const Collections = (props) => {
   return (
     <div class="collections">
         <CollectionsFilter />
         <Wrapper>
-          <LeftFilter />
-          <CardArea />
+          {/* <LeftFilter /> */}
+          <CardArea formData ={props.formData}/>
         </Wrapper>
         
     </div>

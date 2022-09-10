@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 // import '../assets/css/Card.css';
 import NFT1 from "../assets/images/NFT1.png";
 import NFT2Back from "../assets/images/NFT2BACKGROUND.png";
@@ -6,6 +7,7 @@ import NFT2Back from "../assets/images/NFT2BACKGROUND.png";
 
 const Card = (props) => {
     const [clicked,setClicked] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(()=>{
         // console.log(props.id," ",props.visible);
@@ -33,6 +35,9 @@ const Card = (props) => {
         console.log(props.cardsArr,'array')
             localStorage.setItem('cards',JSON.stringify(props.cardsArr));
         
+    }
+    const toComponentDesc=()=>{
+        navigate('/CollectionDescription',{state:{data:props.data,formData:props.formData}});
     }
     return (
         
@@ -63,12 +68,12 @@ const Card = (props) => {
                 paddingRight:"5px"
             }}>
                 <div className="card-text" >
-                    <h5>
+                    <h6>
                     {props.data?props.data.name:""}
-                    </h5>
+                    </h6>
                 </div>
                 <div className="card-text">
-                   <button type="button"  style = {{borderRadius:"25%", background:"lightgreen",border:"none",color:"white"}}>BUY NOW</button>
+                   <a onClick={()=>{toComponentDesc()}}><button type="button"  style = {{borderRadius:"25%", background:"lightgreen",border:"none",color:"white"}}>BUY NOW</button></a>
                 </div>
                 
             </div>
