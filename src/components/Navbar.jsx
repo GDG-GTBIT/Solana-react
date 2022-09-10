@@ -114,19 +114,27 @@ function Navbar() {
                 <Link to={"/team"}>TEAM</Link>
               </div>
               <div className="nav-mob-list">ABOUT</div>
+              <div className="person_wallet_box">
+                <div>
+                  <i className="bi bi-person-circle"></i>
+                </div>
+                <div>
+                  <i className="bi bi-wallet"></i>
+                </div>
+              </div>
               <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search items, Collections"
-                aria-label="Search"
-              />
-              <button className="btn btn-success" type="submit">
-                Search
-              </button>
-            </form>
+                <input
+                  className="form-control me-2"
+                  type="search"
+                  placeholder="Search items, Collections"
+                  aria-label="Search"
+                />
+                <button className="btn btn-success" type="submit">
+                  Search
+                </button>
+              </form>
             </div>
-            
+
           </div>
         </div>
       </nav>

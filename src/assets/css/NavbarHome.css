@@ -96,6 +96,11 @@
   z-index: 10;
 }
 
+.person_wallet_box{
+  display: flex;
+  gap: 15px;
+}
+
 @media screen and (max-width: 1000px){
   .navbarHomeContainer{
     display: none;
