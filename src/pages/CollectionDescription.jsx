@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // import mainImage from "../assets/images/NFT_img.png";
 import Card from "../components/Card";
 import "../assets/css/collectiondescription.css";
@@ -8,11 +8,11 @@ const CollectionDescription = () => {
   const [refresh, setRefresh] = useState(false);
   const location = useLocation();
 
-  useEffect(()=>{
-    console.log("refreshed");
-    if(location!=null && location.state)
-    console.log(location.state.formData);
-  },[refresh]);
+  // useEffect(()=>{
+  //   console.log("refreshed");
+  //   if(location!=null && location.state)
+  //   console.log(location.state.formData);
+  // },[refresh]);
 
   const handleRefresh = () =>{
     refresh === true?setRefresh(false):setRefresh(true);

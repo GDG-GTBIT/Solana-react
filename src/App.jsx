@@ -11,14 +11,19 @@ import { onValue, ref } from 'firebase/database';
 import { db } from './firebase';
 
 function App() {
+  const [reload, setreload] = useState(true);
   const [formData, setformData] = useState([]);
+  if(formData===[]){
+    setreload(false)
+  }
   useEffect(() => { 
     onValue(ref(db , `/`),(snapshot)=>{
       const data = snapshot.val();
       setformData(data);
       console.log(formData);
     });
-  }, []);
+    setreload(true)
+  }, [reload,formData]);
   return (
     <div>
        <Router>
