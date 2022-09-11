@@ -1,6 +1,6 @@
 import React from 'react'
 import '../assets/css/Card.css';
-import NFT1 from "../assets/images/NFT1.png";
+// import NFT1 from "../assets/images/NFT1.png";
 import NFT2Back from "../assets/images/NFT2BACKGROUND.png";
 
 const TeamCard = (props) => {
@@ -17,7 +17,7 @@ const TeamCard = (props) => {
         marginBottom:"2%",
         fontSize:"14px"
         }}>
-            <img className="card-img-top" src={NFT1} alt="Card cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
+            <img className="card-img-top" src={props.img} alt="Card cap" style={{borderRadius:"5%", backgroundImage:`url(${NFT2Back})`, backgroundSize:"cover", width:"90%", 
             marginTop:"5%"
             }} />
             <div className="card-body" style={{

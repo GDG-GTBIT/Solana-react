@@ -32,7 +32,7 @@
 
 @media screen and (max-width: 1024px) {
     .cardarea{
-        width:68vw;
+        /* width:68vw; */
         /* margin-left: 30%; */
     }
 }

@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const Card = (props) => {
     const [clicked,setClicked] = useState(false);
     const navigate = useNavigate();
-let x = props.visible
+    let x = props.visible
     useEffect(()=>{
         // console.log(props.id," ",props.visible);
         setClicked(x);
@@ -57,7 +57,7 @@ let x = props.visible
         border: "1px solid rgba( 255, 255, 255, 0.18 )"
         }}>
             {/* , backgroundImage:`url(${NFT2Back})` */}
-            <img class="card-img-top" src={props.data?props.data.image:""} alt="Card cap" style={{borderRadius:"5%", backgroundSize:"cover", width:"90%", 
+            <img className="card-img-top" src={props.data?props.data.image:""} alt="Card cap" style={{borderRadius:"5%", backgroundSize:"cover", width:"90%", 
             marginTop:"5%"
             }} />
             <div className="card-body" style={{
@@ -73,7 +73,7 @@ let x = props.visible
                     </h6>
                 </div>
                 <div className="card-text">
-                   <a href="/collectionss" onClick={()=>{toComponentDesc()}}><button type="button"  style = {{borderRadius:"25%", background:"lightgreen",border:"none",color:"white"}}>BUY NOW</button></a>
+                   <a href = "/CollectionDescription" onClick={()=>{toComponentDesc()}}><button type="button"  style = {{borderRadius:"25%", background:"lightgreen",border:"none",color:"white"}}>BUY NOW</button></a>
                 </div>
                 
             </div>
@@ -85,10 +85,10 @@ let x = props.visible
                 paddingBottom:"0",
                 paddingTop:"0"
             }}>
-                {/* <div class="card-text">
+                {/* <div className="card-text">
                     XXXX
                 </div> */}
-                <div class="card-text">
+                <div className="card-text">
                     {/* XXXX */}
                     {/* {props.cardsArr.includes(props.id)?  */}
                     {/* <i className="bi bi-heart-fill" onClick={()=>{handleClick(false)}}></i> */}
@@ -107,7 +107,7 @@ let x = props.visible
                 <div className="card-text">
                     Floor Price
                 </div>
-                <div class="card-text">
+                <div className="card-text">
                     {props.data?props.data.value:""}
                 </div>
             </div>

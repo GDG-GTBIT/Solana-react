@@ -1,7 +1,14 @@
 .collections{
     background-image: url("../images/NFT2BACKGROUND.png");
+    width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
-    background-size: cover; 
-    min-height: 100vh;
-    /* width: 100vw;*/
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (min-width: 1000px) {
+    .collections{
+        padding-top: 85px;
+    }
 }

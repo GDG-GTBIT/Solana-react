@@ -28,7 +28,7 @@ const CardArea = (props) => {
     // console.log(arr,"array fetched")
     
     setCardsArr(JSON.parse(localStorage.getItem("cards")));
-    console.log(JSON.parse(localStorage.getItem("cards")), "localstorage value")
+    // console.log(JSON.parse(localStorage.getItem("cards")), "localstorage value")
   // }
   // tempoFucntion();
   },[reloadApi]);

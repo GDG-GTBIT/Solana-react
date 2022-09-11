@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/css/CollectionsFilter.css';
 
+
 const CollectionsFilter = () => {
 
     return(

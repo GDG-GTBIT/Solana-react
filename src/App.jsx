@@ -20,10 +20,10 @@ function App() {
     onValue(ref(db , `/`),(snapshot)=>{
       const data = snapshot.val();
       setformData(data);
-      console.log(formData);
+      // console.log(formData);
     });
-    setreload(true)
-  }, [reload,formData]);
+    setreload(true);
+  }, [reload]);
   return (
     <div>
        <Router>
