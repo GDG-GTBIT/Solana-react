@@ -28,7 +28,7 @@ function Carousel() {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <div className="imgCaroselContainer">
-            <img src={`${tiger_icon1}`} className="CaroselImg d-block w-100" alt={ImgData[0].alt} />
+            <img src={`${tiger_icon1}`} className="CaroselImg" alt={ImgData[0].alt} />
           </div>
         </div>
         {ImgData.map((value, idx) => (

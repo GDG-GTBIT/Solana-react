@@ -8,11 +8,11 @@ import { useNavigate } from 'react-router-dom';
 const Card = (props) => {
     const [clicked,setClicked] = useState(false);
     const navigate = useNavigate();
-
+let x = props.visible
     useEffect(()=>{
         // console.log(props.id," ",props.visible);
-        setClicked(props.visible);
-    },[clicked]);
+        setClicked(x);
+    },[clicked,x]);
 
     function handleClick(check){
         console.log(props.id)
