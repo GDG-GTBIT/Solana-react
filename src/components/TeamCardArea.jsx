@@ -18,6 +18,7 @@ const CardArea = () => {
       // arr.push(response);
       setformData(response.data);
     }
+    setfetchItems(true)
     fetchData();
   }, [fetchItems])
   

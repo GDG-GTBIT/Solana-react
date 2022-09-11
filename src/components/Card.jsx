@@ -1,8 +1,8 @@
 import React,{useEffect,useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 // import '../assets/css/Card.css';
-import NFT1 from "../assets/images/NFT1.png";
-import NFT2Back from "../assets/images/NFT2BACKGROUND.png";
+// import NFT1 from "../assets/images/NFT1.png";
+// import NFT2Back from "../assets/images/NFT2BACKGROUND.png";
 
 
 const Card = (props) => {
@@ -73,7 +73,7 @@ const Card = (props) => {
                     </h6>
                 </div>
                 <div className="card-text">
-                   <a onClick={()=>{toComponentDesc()}}><button type="button"  style = {{borderRadius:"25%", background:"lightgreen",border:"none",color:"white"}}>BUY NOW</button></a>
+                   <a href="/collectionss" onClick={()=>{toComponentDesc()}}><button type="button"  style = {{borderRadius:"25%", background:"lightgreen",border:"none",color:"white"}}>BUY NOW</button></a>
                 </div>
                 
             </div>

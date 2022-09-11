@@ -1,12 +1,12 @@
 import React,{useEffect,useState} from 'react';
 import Card from './Card';
 import '../assets/css/CardArea.css';
-import axios from 'axios';
-import { onValue, ref } from 'firebase/database';
-import { db } from '../firebase';
+// import axios from 'axios';
+// import { onValue, ref } from 'firebase/database';
+// import { db } from '../firebase';
 
 const CardArea = (props) => {
-  const [cardsLength,setCardsLength] = useState(8);
+  // const [cardsLength,setCardsLength] = useState(8);
   const [cardsArr,setCardsArr] = useState([]);
   // const [formData, setformData] = useState([])
   const reloadApi = false
